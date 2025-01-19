@@ -19,7 +19,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gold Investing Calculator</h1>
+        <h1>Gold Investing Calculator <span class="info-icon" onclick="toggleInfo()">ⓘ</span></h1>
+        <div id="info-popup" class="info-popup">
+            <div class="info-content">
+                <span class="close-btn" onclick="toggleInfo()">×</span>
+                <p>This calculator simplifies gold investment decisions by automatically converting between grams and troy ounces. When you're buying gold in smaller quantities (like 20 grams), it instantly compares your purchase price to market rates quoted in troy ounces, eliminating manual conversion calculations. This helps you quickly determine if you're getting a fair price for your gold investment, regardless of the quantity.</p>
+            </div>
+        </div>
         <form id="goldForm">
             <label for="buyingPrice">Buying Price of Gold ($):</label>
             <input type="number" id="buyingPrice" name="buyingPrice" required>

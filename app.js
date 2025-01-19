@@ -64,6 +64,21 @@ function calculatePremium() {
     document.getElementById('percentageDifference').textContent = `${percentageDisplay}%`;
 }
 
+function toggleInfo() {
+    const popup = document.getElementById('info-popup');
+    popup.classList.toggle('show');
+}
+
+// Close popup when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('info-popup');
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('show');
+        }
+    });
+});
+
 // Force update function
 async function forceUpdate() {
     try {
