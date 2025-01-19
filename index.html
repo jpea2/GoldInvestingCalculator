@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Investing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Investing Calculator</h1>
+        <form id="goldForm">
+            <label for="buyingPrice">Buying Price of Gold ($):</label>
+            <input type="number" id="buyingPrice" name="buyingPrice" required>
+            <label for="weight">Weight of Gold Being Bought:</label>
+            <select id="weight" name="weight" required>
+                <option value="1">1g</option>
+                <option value="5">5g</option>
+                <option value="10">10g</option>
+                <option value="20">20g</option>
+                <option value="50">50g</option>
+                <option value="31.1035">1oz</option> <!-- 1 ounce in grams -->
+                <option value="15.5518">1/2oz</option>
+                <option value="7.7759">1/4oz</option>
+            </select>
+            <label for="marketPrice">Market Price of Gold Per Ounce($):</label>
+            <input type="number" id="marketPrice" name="marketPrice" required>
+            <button type="button" onclick="calculatePremium()">Calculate</button>
+        </form>
+        <div id="results">
+            <div class="result-row">
+                <span>Percentage Difference:</span>
+                <span id="percentageDifference" class="result-value"></span>
+            </div>
+            <div class="result-row">
+                <span>Dollar Spread:</span>
+                <span id="dollarSpread" class="result-value"></span>
+            </div>
+        </div>
+        <div class="note">
+            <p style="color: #808080; font-size: 0.9em; margin-top: 20px; line-height: 1.4;">Please Note: An avoirdupois ounce is approximately 28.35 grams, commonly used in the US for most goods. A troy ounce, used for precious metals like gold, is approximately 31.1035 grams. In the context of gold and other precious metals, the troy ounce is the standard unit of measurement, which is why you see 31.1035 grams used for an ounce in the dropdown options.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/decimal.js@latest/decimal.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
