@@ -86,6 +86,63 @@ button:hover {
     color: #808080;
 }
 
+/* Settings Section */
+.settings-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.settings-section h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.update-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+.update-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.update-button i {
+    font-style: normal;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.update-button i.spinning {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
 /* Media Queries for better mobile responsiveness */
 @media (max-width: 480px) {
     .container {
