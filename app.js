@@ -104,7 +104,7 @@ async function forceUpdate() {
 
         // Show success message
         button.innerHTML = '✓ Updated!';
-        button.style.backgroundColor = '#28a745';
+        button.classList.add('success');
 
         // Reload the page after a short delay
         setTimeout(() => {
