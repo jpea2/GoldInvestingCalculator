@@ -2,3 +2,8 @@ node_modules/
 .DS_Store
 *.log
 .env
+
+# Logo generator files
+generate-logo.html
+generate-icons-from-logo.sh
+gold-calculator-logo.png
